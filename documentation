@@ -1,0 +1,30 @@
+cd ./frontend/ => install react in this folder
+npm create vite@latest . in frontend folder
+npm install
+npm run dev
+cd .. (root)
+npm init -y (package.json)
+npm install express dotenv cookie-parser bcrycptjs moongose socket.io jsonwebtoken
+npm run server (server.js)
+npm install nodemon --save-dev
+backend contains 2 folders (routes, controllers)
+postman (api testing)
+mongodb for database
+
+
+connectToMongoDB.js (for connection with mongoDB)
+models folder contains: user.model.js
+user schema 
+
+34min error (await not working)
+
+42:00=> postman done and user stored in database mongoDB.
+
+in generateToken.js 2 functions created used JWT_TOKEN
+reload vs code: {ctrl+shift+P}
+
+login endpoint: 53:00
+auth.controller.js {signup done,  login started }
+
+56:00 {auth.controller.js contains signup, login and logout functionality}
+
