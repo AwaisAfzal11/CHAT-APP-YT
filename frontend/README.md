@@ -41,6 +41,18 @@ now working on conversation: in conversation.jsx {user pic, user_name, emoji dis
 now working on logout symbol: LogoutButton.jsx imported BiLogOut (react symbol) imported and compiled in Sidebar.jsx {Error: Compare code files || see ispect in chrome}
 {Collection of contacts is done now started P2P conversation MessageContainer}
 
+components-messages-MessageContiner.jsx (To:{name})-Messages.jsx-Message.jsx file created
+Messages.jsx contains all messages 
+Message.jsx contain chatBubble for caht-start and chat-end
+Message.jsx contain {avatar, message, date}
+
+
+
+
+
+
+
+
 
 
 
