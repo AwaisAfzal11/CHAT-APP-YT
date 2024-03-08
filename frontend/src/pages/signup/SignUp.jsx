@@ -1,45 +1,68 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import GenderCheckbox from './GenderCheckbox'
+import { Link } from 'react-router-dom'
 
 const SignUp = () => {
+
+  const [inputs, setInputs] = useState({
+    firstName: '',
+    username: '',
+    password: '' ,
+    confirmPassword: '',
+    gender: ''
+  })
+
+  const handleCheckboxChange = (gender) =>{
+    setInputs ({...inputs,gender})
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(inputs)
+  }
+
   return (
      <div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
       <div className='w-full p-6 rounded-1g shadow-md backdrop-blur-1g bg-opacity-0'>
         <h1 className='text-3xl font-semibold text-center text-gray-300'> SignUp</h1>
         
-        <form>
+        <form onSubmit={handleSubmit}>
           <div>
             <label className='label p-2'>
             <span className='text-base label-text'>Full Name</span>
             </label>
-            <input type='text' placeholder='Walter White' className='w-full input input-bordered h-10' />
+            <input type='text' placeholder='Walter White' className='w-full input input-bordered h-10'
+              value={inputs.firstName} onChange={(e) => setInputs({...inputs, firstName : e.target.value})} />
           </div> 
             
           <div>
           <label className='label p-2'>
           <span className='text-base label-text'>Username</span>
           </label>
-          <input type='text' placeholder='Heisenberg' className='w-full input input-bordered h-10' />          
+          <input type='text' placeholder='Heisenberg' className='w-full input input-bordered h-10'
+            value={inputs.username} onChange={(e) => setInputs({...inputs,  username : e.target.value})} />          
           </div>
 
           <div>
           <label className='label '>
           <span className='text-base label-text'>Password</span>
           </label>
-          <input type='text' placeholder='4 digit pin' className='w-full input input-bordered h-10' />          
+          <input type='text' placeholder='4 digit pin' className='w-full input input-bordered h-10' 
+             onChange={(e) => setInputs({...inputs,  password : e.target.value})}/>          
           </div>
 
           <div>
           <label className='label '>
           <span className='text-base label-text'>Confirm Password</span>
           </label>
-          <input type='text' placeholder='repeat it' className='w-full input input-bordered mt-2 h-10' />          
+          <input type='text' placeholder='repeat it' className='w-full input input-bordered mt-2 h-10' 
+            onChange={(e) => setInputs({...inputs,  confirmPassword : e.target.value})}/>          
           </div>
 
           {/* GENDER CHECKBOX GOES HERE */}
-          <GenderCheckbox/>
+          <GenderCheckbox onCheckboxChange = {handleCheckboxChange} selectedGender = {inputs.gender}/>
 
-          <a href="#" className='text-sm hover:underline hover:text-blue-500 mt-2 inline-block'>Already have an account</a>
+          <Link to="/login" className='text-sm hover:underline hover:text-blue-500 mt-2 inline-block'>Already have an account</Link>
 
           <div>
           <button className='btn btn-block btn-sm mt-2'>SignUp</button>

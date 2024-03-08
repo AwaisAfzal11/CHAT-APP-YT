@@ -47,6 +47,13 @@ Message.jsx contain chatBubble for caht-start and chat-end
 Message.jsx contain {avatar, message, date}
 
 
+New part started {connect backend with frontend}
+
+(frontend) npm i react-router-dom  for {BrowserRoute, Route, Switch and Link}
+
+
+
+
 
 
 

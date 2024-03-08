@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const Conversation = () => {
@@ -21,8 +22,8 @@ const Conversation = () => {
                 <span className='text-x1'>€uro</span>
             </div>
         </div>
-        {/* divider line  */}
-        <div className='divider my-0  py-0 h-1'/>
+        {/* Divider line */}
+      <div className='divider my-0 py-0 h-1'></div>
     </div>
   )
 }
