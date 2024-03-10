@@ -52,15 +52,7 @@ New part started {connect backend with frontend}
 (frontend) npm i react-router-dom  for {BrowserRoute, Route, Switch and Link}
 
 
+npm i react-hot-toast
 
 
-
-
-
-
-
-
-
-
-
-
+// "events": "^3.3.0",
